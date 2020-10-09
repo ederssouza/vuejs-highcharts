@@ -9,7 +9,6 @@
         :thousandsSep="chart.thousandsSep"
         :decimalPoint="chart.decimalPoint"
         :height="chart.height"
-        :yAxis="chart.yAxis"
         :xAxis="chart.xAxis"
         :series="chart.series"
         :crosshair="chart.crosshair"
