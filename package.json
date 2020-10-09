@@ -17,7 +17,7 @@
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "build-bundle": "vue-cli-service build --target lib --name vuejs-highcharts ./src/components/index.js",
-    "npm-publish": "yarn build-bundle && npm publish --access public"
+    "npm-publish": "yarn build-bundle && npm login && npm publish --access public"
   },
   "dependencies": {
     "core-js": "^2.6.5",
