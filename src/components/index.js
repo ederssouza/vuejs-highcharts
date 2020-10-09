@@ -1,6 +1,7 @@
 'use strict'
 
 import Vue from 'vue'
+import Highcharts from 'highcharts'
 
 // charts
 import AreaChart from 'components/charts/AreaChart'
@@ -9,6 +10,9 @@ import ColumnChart from 'components/charts/ColumnChart'
 import LineChart from 'components/charts/LineChart'
 import PieChart from 'components/charts/PieChart'
 import CombinationChart from 'components/charts/CombinationChart'
+
+Vue.$highcharts = Highcharts
+Vue.prototype.$highcharts = Highcharts
 
 const Components = {
   AreaChart,
