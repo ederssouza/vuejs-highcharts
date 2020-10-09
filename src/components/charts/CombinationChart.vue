@@ -161,23 +161,7 @@ export default {
             }
           }
         },
-        yAxis: {
-          ...yAxis,
-          gridLineColor,
-          lineColor: gridLineColor,
-          title: {
-            ...yAxis.title,
-            style: {
-              ...customStyles
-            }
-          },
-          labels: {
-            ...yAxis.labels,
-            style: {
-              ...customStyles
-            }
-          }
-        },
+        yAxis,
         series,
         tooltip: {
           shared: true,
