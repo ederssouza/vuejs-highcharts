@@ -29,9 +29,9 @@ Object.keys(Components).forEach(name => {
 
 export default Components
 /* eslint-disable import/prefer-default-export */
-export { default as AreaChart } from './AreaChart'
-export { default as BarChart } from './BarChart'
-export { default as ColumnChart } from './ColumnChart'
-export { default as LineChart } from './LineChart'
-export { default as PieChart } from './PieChart'
-export { default as CombinationChart } from './CombinationChart'
+export { default as AreaChart } from 'components/charts/AreaChart'
+export { default as BarChart } from 'components/charts/BarChart'
+export { default as ColumnChart } from 'components/charts/ColumnChart'
+export { default as LineChart } from 'components/charts/LineChart'
+export { default as PieChart } from 'components/charts/PieChart'
+export { default as CombinationChart } from 'components/charts/CombinationChart'
