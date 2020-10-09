@@ -37,7 +37,12 @@ export default {
       default: () => {}
     },
     yAxis: {
-      type: Array
+      type: Object,
+      default: () => ({
+        title: {
+          text: ''
+        }
+      })
     },
     series: {
       type: Array,
@@ -161,7 +166,23 @@ export default {
             }
           }
         },
-        yAxis,
+        yAxis: {
+          ...yAxis,
+          gridLineColor,
+          lineColor: gridLineColor,
+          title: {
+            ...yAxis.title,
+            style: {
+              ...customStyles
+            }
+          },
+          labels: {
+            ...yAxis.labels,
+            style: {
+              ...customStyles
+            }
+          }
+        },
         series,
         tooltip: {
           shared: true,
