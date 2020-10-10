@@ -23,6 +23,7 @@
     "core-js": "^2.6.5",
     "highcharts": "^8.1.2",
     "prismjs": "^1.21.0",
+    "vanillajs-scrollspy": "^2.0.3",
     "vue": "^2.6.10",
     "vue-prism-component": "^1.2.0"
   },
