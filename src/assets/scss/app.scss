@@ -42,6 +42,9 @@ hr {
 }
 
 /* global components */
+.section {
+  padding: 15px 0 0;
+}
 
 /* typography */
 .section__title {
@@ -384,12 +387,12 @@ html, body {
   transition: color .3s ease-in-out;
 }
 
-.doc__nav .selected {
+.doc__nav .active {
   color: var(--accent-color);
   position: relative;
 }
 
-.doc__nav .selected:after {
+.doc__nav .active:after {
   position: absolute;
   content: "";
   width: 1rem;
