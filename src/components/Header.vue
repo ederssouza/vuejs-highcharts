@@ -36,8 +36,13 @@ export default {
 }
 
 .header {
+  background-color: #fff;
   border-bottom: 1px solid var(--code-bg-color);
   grid-template-columns: 1fr 150px 60% 1fr;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 .logo {
