@@ -1,45 +1,27 @@
 <template>
-  <Tabs>
-    <template v-slot:preview>
-      <ColumnChart
-        :title="chart.title"
-        :subtitle="chart.subtitle"
-        :backgroundColor="chart.backgroundColor"
-        :gridLineColor="chart.gridLineColor"
-        :thousandsSep="chart.thousandsSep"
-        :decimalPoint="chart.decimalPoint"
-        :height="chart.height"
-        :yAxis="chart.yAxis"
-        :xAxis="chart.xAxis"
-        :series="chart.series"
-        :crosshair="chart.crosshair"
-        :customStyles="chart.customStyles"
-        :plotOptions="chart.plotOptions"
-      />
-    </template>
-
-    <template v-slot:code>
-      <h2 class="container__subtitle">Component</h2>
-      <Highlight language="html">
-      </Highlight>
-
-      <h2 class="container__subtitle">Script</h2>
-      <Highlight>
-      </Highlight>
-    </template>
-  </Tabs>
+  <ColumnChart
+    :title="chart.title"
+    :subtitle="chart.subtitle"
+    :backgroundColor="chart.backgroundColor"
+    :gridLineColor="chart.gridLineColor"
+    :thousandsSep="chart.thousandsSep"
+    :decimalPoint="chart.decimalPoint"
+    :height="chart.height"
+    :yAxis="chart.yAxis"
+    :xAxis="chart.xAxis"
+    :series="chart.series"
+    :crosshair="chart.crosshair"
+    :customStyles="chart.customStyles"
+    :plotOptions="chart.plotOptions"
+  />
 </template>
 
 <script>
-import Highlight from 'components/Highlight'
-import Tabs from 'components/Tabs'
 import ColumnChart from 'components/charts/ColumnChart'
 
 export default {
   name: 'ColumnChartSample',
   components: {
-    Highlight,
-    Tabs,
     ColumnChart
   },
   data () {
@@ -78,7 +60,7 @@ export default {
         crosshair: true,
         customStyles: {
           color: '#666',
-          fontFamily: 'Montserrat'
+          fontFamily: 'Nunito Sans'
         },
         plotOptions: {
           column: {

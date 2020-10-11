@@ -1,44 +1,26 @@
 <template>
-  <Tabs>
-    <template v-slot:preview>
-      <LineChart
-        :title="chart.title"
-        :subtitle="chart.subtitle"
-        :backgroundColor="chart.backgroundColor"
-        :gridLineColor="chart.gridLineColor"
-        :thousandsSep="chart.thousandsSep"
-        :decimalPoint="chart.decimalPoint"
-        :height="chart.height"
-        :yAxis="chart.yAxis"
-        :xAxis="chart.xAxis"
-        :series="chart.series"
-        :crosshair="chart.crosshair"
-        :customStyles="chart.customStyles"
-      />
-    </template>
-
-    <template v-slot:code>
-      <h2 class="container__subtitle">Component</h2>
-      <Highlight language="html">
-      </Highlight>
-
-      <h2 class="container__subtitle">Script</h2>
-      <Highlight>
-      </Highlight>
-    </template>
-  </Tabs>
+  <LineChart
+    :title="chart.title"
+    :subtitle="chart.subtitle"
+    :backgroundColor="chart.backgroundColor"
+    :gridLineColor="chart.gridLineColor"
+    :thousandsSep="chart.thousandsSep"
+    :decimalPoint="chart.decimalPoint"
+    :height="chart.height"
+    :yAxis="chart.yAxis"
+    :xAxis="chart.xAxis"
+    :series="chart.series"
+    :crosshair="chart.crosshair"
+    :customStyles="chart.customStyles"
+  />
 </template>
 
 <script>
-import Highlight from 'components/Highlight'
-import Tabs from 'components/Tabs'
 import LineChart from 'components/charts/LineChart'
 
 export default {
   name: 'LineChartSample',
   components: {
-    Highlight,
-    Tabs,
     LineChart
   },
   data () {
@@ -79,7 +61,7 @@ export default {
         crosshair: true,
         customStyles: {
           color: '#666',
-          fontFamily: 'Montserrat'
+          fontFamily: 'Nunito Sans'
         }
       }
     }

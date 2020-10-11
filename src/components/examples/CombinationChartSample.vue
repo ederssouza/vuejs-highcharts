@@ -1,43 +1,25 @@
 <template>
-  <Tabs>
-    <template v-slot:preview>
-      <CombinationChart
-        :title="chart.title"
-        :subtitle="chart.subtitle"
-        :backgroundColor="chart.backgroundColor"
-        :gridLineColor="chart.gridLineColor"
-        :thousandsSep="chart.thousandsSep"
-        :decimalPoint="chart.decimalPoint"
-        :height="chart.height"
-        :xAxis="chart.xAxis"
-        :series="chart.series"
-        :crosshair="chart.crosshair"
-        :customStyles="chart.customStyles"
-      />
-    </template>
-
-    <template v-slot:code>
-      <h2 class="container__subtitle">Component</h2>
-      <Highlight language="html">
-      </Highlight>
-
-      <h2 class="container__subtitle">Script</h2>
-      <Highlight>
-      </Highlight>
-    </template>
-  </Tabs>
+  <CombinationChart
+    :title="chart.title"
+    :subtitle="chart.subtitle"
+    :backgroundColor="chart.backgroundColor"
+    :gridLineColor="chart.gridLineColor"
+    :thousandsSep="chart.thousandsSep"
+    :decimalPoint="chart.decimalPoint"
+    :height="chart.height"
+    :xAxis="chart.xAxis"
+    :series="chart.series"
+    :crosshair="chart.crosshair"
+    :customStyles="chart.customStyles"
+  />
 </template>
 
 <script>
-import Highlight from 'components/Highlight'
-import Tabs from 'components/Tabs'
 import CombinationChart from 'components/charts/CombinationChart'
 
 export default {
   name: 'CombinationChartSample',
   components: {
-    Highlight,
-    Tabs,
     CombinationChart
   },
   data () {
@@ -97,7 +79,7 @@ export default {
         crosshair: true,
         customStyles: {
           color: '#666',
-          fontFamily: 'Montserrat'
+          fontFamily: 'Nunito Sans'
         }
       }
     }
