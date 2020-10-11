@@ -58,8 +58,14 @@ export default {
         navbar.classList.remove('fixed')
       }
     },
+    setSectionId () {
+      const sections = document.querySelectorAll('.section')
+      sections.forEach((section, index) => section.setAttribute('id', `section${index}`))
+    },
     initScrollSpy () {
       const navbar = this.$refs['navbar']
+      this.setSectionId()
+
       if (navbar) {
         const scrollspy = new VanillaScrollspy(navbar)
         scrollspy.init()
