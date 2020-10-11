@@ -28,4 +28,10 @@ export default {
 
 <style lang="scss">
 @import 'assets/scss/app.scss';
+
+.hljs {
+  border: 1px solid var(--code-bg-color);
+  border-radius: 4px;
+  padding: 15px;
+}
 </style>
