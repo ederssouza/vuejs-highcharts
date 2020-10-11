@@ -1,21 +1,21 @@
 <template>
   <article class="doc__content">
-    <section class="section" id="section0">
+    <section class="section">
       <h3 class="section__title">Instalation</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus iste iure nulla veritatis possimus aliquam deserunt neque est nihil ullam, corrupti vel eius dignissimos rerum in doloribus pariatur voluptatum.</p>
     </section>
 
-    <section class="section" id="section1">
+    <section class="section">
       <h3 class="section__title">How to use</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus iste iure nulla veritatis possimus aliquam deserunt neque est nihil ullam, corrupti vel eius dignissimos rerum in doloribus pariatur voluptatum.</p>
     </section>
 
-    <section class="section" id="section2">
+    <section class="section">
       <h3 class="section__title">Options</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus iste iure nulla veritatis possimus aliquam deserunt neque est nihil ullam, corrupti vel eius dignissimos rerum in doloribus pariatur voluptatum.</p>
     </section>
 
-    <section class="section" id="section3">
+    <section class="section">
       <h3 class="section__title">Basic chart</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus iste iure nulla veritatis possimus aliquam deserunt neque est nihil ullam, corrupti vel eius dignissimos rerum in doloribus pariatur voluptatum.</p>
       <ColumnChartSample />
@@ -43,7 +43,7 @@ export default {
       <hr>
     </section>
 
-    <section class="section" id="section4">
+    <section class="section">
       <h3 class="section__title">Area chart</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus iste iure nulla veritatis possimus aliquam deserunt neque est nihil ullam, corrupti vel eius dignissimos rerum in doloribus pariatur voluptatum.</p>
       <AreaChartSample />
@@ -71,7 +71,7 @@ export default {
       <hr>
     </section>
 
-    <section class="section" id="section5">
+    <section class="section">
       <h3 class="section__title">Bar chart</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus iste iure nulla veritatis possimus aliquam deserunt neque est nihil ullam, corrupti vel eius dignissimos rerum in doloribus pariatur voluptatum.</p>
       <BarChartSample />
@@ -99,7 +99,7 @@ export default {
       <hr>
     </section>
 
-    <section class="section" id="section6">
+    <section class="section">
       <h3 class="section__title">Column chart</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus iste iure nulla veritatis possimus aliquam deserunt neque est nihil ullam, corrupti vel eius dignissimos rerum in doloribus pariatur voluptatum.</p>
       <ColumnChartSample />
@@ -127,7 +127,7 @@ export default {
       <hr>
     </section>
 
-    <section class="section" id="section7">
+    <section class="section">
       <h3 class="section__title">Scatter chart</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus iste iure nulla veritatis possimus aliquam deserunt neque est nihil ullam, corrupti vel eius dignissimos rerum in doloribus pariatur voluptatum.</p>
       <ScatterChartSample />
@@ -155,7 +155,7 @@ export default {
       <hr>
     </section>
 
-    <section class="section" id="section8">
+    <section class="section">
       <h3 class="section__title">Line chart</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus iste iure nulla veritatis possimus aliquam deserunt neque est nihil ullam, corrupti vel eius dignissimos rerum in doloribus pariatur voluptatum.</p>
       <LineChartSample />
@@ -183,7 +183,7 @@ export default {
       <hr>
     </section>
 
-    <section class="section" id="section9">
+    <section class="section">
       <h3 class="section__title">Pie chart</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus iste iure nulla veritatis possimus aliquam deserunt neque est nihil ullam, corrupti vel eius dignissimos rerum in doloribus pariatur voluptatum.</p>
       <PieChartSample />
@@ -211,7 +211,7 @@ export default {
       <hr>
     </section>
 
-    <section class="section" id="section10">
+    <section class="section">
       <h3 class="section__title">Combination chart</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus iste iure nulla veritatis possimus aliquam deserunt neque est nihil ullam, corrupti vel eius dignissimos rerum in doloribus pariatur voluptatum.</p>
       <CombinationChartSample />
@@ -239,7 +239,7 @@ export default {
       <hr>
     </section>
 
-    <section class="section" id="section11">
+    <section class="section">
       <h3 class="section__title">Rewrite all props</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus iste iure nulla veritatis possimus aliquam deserunt neque est nihil ullam, corrupti vel eius dignissimos rerum in doloribus pariatur voluptatum.</p>
       <ColumnChartSample />
