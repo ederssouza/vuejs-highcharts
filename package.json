@@ -21,11 +21,11 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "highcharts": "^8.1.2",
+    "highcharts": "^8.2.0",
+    "highlight.js": "^10.2.1",
     "prismjs": "^1.21.0",
     "vanillajs-scrollspy": "^2.0.3",
-    "vue": "^2.6.10",
-    "vue-prism-component": "^1.2.0"
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.3",
