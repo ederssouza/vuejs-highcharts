@@ -13,11 +13,6 @@
             <i class="fa fa-github"></i> Github
           </a>
         </li>
-        <li class="menu__item">
-          <router-link :to="{ name: 'Home' }" class="link link--dark">
-            <i class="fa fa-home"></i> Home
-          </router-link>
-        </li>
       </ul>
     </nav>
   </div>
