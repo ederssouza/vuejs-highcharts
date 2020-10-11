@@ -50,7 +50,7 @@ export default {
           navbar.querySelector('li:first-child a').classList.add('active')
         }
 
-        if (window.pageYOffset > 63) {
+        if (window.pageYOffset > 0) {
           navbar.classList.add('fixed')
           return
         }
@@ -96,7 +96,7 @@ export default {
 
 .doc__nav ul.fixed {
   position: fixed;
-  top: 2rem;
+  top: 80px;
 }
 
 .doc__nav li:hover {
