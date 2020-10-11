@@ -2,12 +2,11 @@
 
 import Vue from 'vue'
 import App from './App.vue'
-import Highcharts from 'highcharts'
+import hljs from 'highlight.js'
 import router from './router'
 
+Vue.use(hljs.vuePlugin)
 Vue.config.productionTip = false
-Vue.$highcharts = Highcharts
-Vue.prototype.$highcharts = Highcharts
 
 new Vue({
   render: h => h(App),
