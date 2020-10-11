@@ -26,14 +26,17 @@ export default {
   data () {
     return {
       items: [
-        { label: 'Basic Chart' },
-        { label: 'Area Chart' },
-        { label: 'Bar Chart' },
-        { label: 'Column Chart' },
-        { label: 'Scatter Chart' },
-        { label: 'Line Chart' },
-        { label: 'Pie Chart' },
-        { label: 'Combination Chart' },
+        { label: 'Instalation' },
+        { label: 'How to use' },
+        { label: 'Options' },
+        { label: 'Basic chart' },
+        { label: 'Area chart' },
+        { label: 'Bar chart' },
+        { label: 'Column chart' },
+        { label: 'Scatter chart' },
+        { label: 'Line chart' },
+        { label: 'Pie chart' },
+        { label: 'Combination chart' },
         { label: 'Rewrite all props' }
       ]
     }
