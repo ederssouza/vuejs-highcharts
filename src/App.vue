@@ -34,4 +34,10 @@ export default {
   border-radius: 4px;
   padding: 15px;
 }
+
+.vuejs-highcharts {
+  border: 1px solid var(--code-bg-color);
+  border-radius: 4px;
+  padding: 15px;
+}
 </style>
