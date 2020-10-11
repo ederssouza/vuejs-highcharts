@@ -4,32 +4,23 @@
       <h3 class="section__title">Title</h3>
       <p>Text example.</p>
       <h3 class="section__title">Installation</h3>
-      <div class="code__block code__block--notabs">
-        <pre class="code code--block">
-          <code>
-            $ npm install vuejs-highcharts --save
-            # OR
-            $ yarn add vuejs-highcharts
-          </code>
-        </pre>
-      </div>
 
-      <div class="code__block code__block--notabs">
-        <pre class="code code--block">
-          <code>
-            var one = 1
-          </code>
-        </pre>
-      </div>
-      <Highlight language="html">
-      &lt;ul&gt;
-        &lt;li&gt;item&lt;/li&gt;
-        &lt;li&gt;item&lt;/li&gt;
-      &lt;/ul&gt;
-      </Highlight>
+      <highlightjs language='javascript' :code="`var x = 5;
 
-      <Highlight>var one = 1
-      </Highlight>
+function myFunc () {
+  return true
+}`"
+      />
+      <highlightjs
+        language='html'
+        :code="`<ul>
+  <li>item</li>
+  <li>item</li>
+  <li>item</li>
+  <li>item</li>
+</ul>`"
+      />
+      <highlightjs language='shell' code="$ npm i vuejs-highcharts --save" />
     </section>
 
     <section class="section" id="section2">
@@ -75,15 +66,7 @@
 </template>
 
 <script>
-import Highlight from 'components/Highlight'
-
 export default {
-  name: 'Home',
-  components: {
-    Highlight
-  }
+  name: 'Home'
 }
 </script>
-
-<style lang="scss">
-</style>
