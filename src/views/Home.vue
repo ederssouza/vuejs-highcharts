@@ -3,16 +3,65 @@
     <section class="section">
       <h3 class="section__title">Instalation</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus iste iure nulla veritatis possimus aliquam deserunt neque est nihil ullam, corrupti vel eius dignissimos rerum in doloribus pariatur voluptatum.</p>
+      <highlightjs language='zsh' :code="`$ npm install vuejs-highcharts --save
+# OR
+$ yarn install vuejs-highcharts`
+      " />
+      <hr>
     </section>
 
     <section class="section">
       <h3 class="section__title">How to use</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus iste iure nulla veritatis possimus aliquam deserunt neque est nihil ullam, corrupti vel eius dignissimos rerum in doloribus pariatur voluptatum.</p>
+
+      <strong>HTML</strong>
+      <highlightjs
+        language='html'
+        :code="`<template>
+  <!-- code here -->
+</template>`"
+      />
+
+      <strong>JavaScript</strong>
+      <highlightjs
+        language='html'
+        :code="`<script>
+export default {
+  data () {
+    // code here
+  }
+}
+</script>`"
+      />
+      <hr>
     </section>
 
     <section class="section">
       <h3 class="section__title">Options</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus iste iure nulla veritatis possimus aliquam deserunt neque est nihil ullam, corrupti vel eius dignissimos rerum in doloribus pariatur voluptatum.</p>
+      <table id="customers">
+        <tr>
+          <th>Options</th>
+          <th>Value</th>
+          <th>Default</th>
+        </tr>
+        <tr>
+          <td>encryption</td>
+          <td>encrypt all notes before saving. If turned on, it requires password to open the file.</td>
+          <td>false</td>
+        </tr>
+        <tr>
+          <td>highlighting</td>
+          <td>Show syntax highlight on markdown text.</td>
+          <td>true</td>
+        </tr>
+        <tr>
+          <td>prettyTable</td>
+          <td>Render table with Scribbler’s pretty table style.</td>
+          <td>true</td>
+        </tr>
+      </table>
+      <hr>
     </section>
 
     <section class="section">
@@ -21,7 +70,7 @@
       <ColumnChartSample />
 
       <h3>Code</h3>
-      <h4>HTML</h4>
+      <strong>HTML</strong>
       <highlightjs
         language='html'
         :code="`<template>
@@ -29,7 +78,7 @@
 </template>`"
       />
 
-      <h4>JavaScript</h4>
+      <strong>JavaScript</strong>
       <highlightjs
         language='html'
         :code="`<script>
@@ -49,7 +98,7 @@ export default {
       <AreaChartSample />
 
       <h3>Code</h3>
-      <h4>HTML</h4>
+      <strong>HTML</strong>
       <highlightjs
         language='html'
         :code="`<template>
@@ -57,7 +106,7 @@ export default {
 </template>`"
       />
 
-      <h4>JavaScript</h4>
+      <strong>JavaScript</strong>
       <highlightjs
         language='html'
         :code="`<script>
@@ -77,7 +126,7 @@ export default {
       <BarChartSample />
 
       <h3>Code</h3>
-      <h4>HTML</h4>
+      <strong>HTML</strong>
       <highlightjs
         language='html'
         :code="`<template>
@@ -85,7 +134,7 @@ export default {
 </template>`"
       />
 
-      <h4>JavaScript</h4>
+      <strong>JavaScript</strong>
       <highlightjs
         language='html'
         :code="`<script>
@@ -105,7 +154,7 @@ export default {
       <ColumnChartSample />
 
       <h3>Code</h3>
-      <h4>HTML</h4>
+      <strong>HTML</strong>
       <highlightjs
         language='html'
         :code="`<template>
@@ -113,7 +162,7 @@ export default {
 </template>`"
       />
 
-      <h4>JavaScript</h4>
+      <strong>JavaScript</strong>
       <highlightjs
         language='html'
         :code="`<script>
@@ -133,7 +182,7 @@ export default {
       <ScatterChartSample />
 
       <h3>Code</h3>
-      <h4>HTML</h4>
+      <strong>HTML</strong>
       <highlightjs
         language='html'
         :code="`<template>
@@ -141,7 +190,7 @@ export default {
 </template>`"
       />
 
-      <h4>JavaScript</h4>
+      <strong>JavaScript</strong>
       <highlightjs
         language='html'
         :code="`<script>
@@ -161,7 +210,7 @@ export default {
       <LineChartSample />
 
       <h3>Code</h3>
-      <h4>HTML</h4>
+      <strong>HTML</strong>
       <highlightjs
         language='html'
         :code="`<template>
@@ -169,7 +218,7 @@ export default {
 </template>`"
       />
 
-      <h4>JavaScript</h4>
+      <strong>JavaScript</strong>
       <highlightjs
         language='html'
         :code="`<script>
@@ -189,7 +238,7 @@ export default {
       <PieChartSample />
 
       <h3>Code</h3>
-      <h4>HTML</h4>
+      <strong>HTML</strong>
       <highlightjs
         language='html'
         :code="`<template>
@@ -197,7 +246,7 @@ export default {
 </template>`"
       />
 
-      <h4>JavaScript</h4>
+      <strong>JavaScript</strong>
       <highlightjs
         language='html'
         :code="`<script>
@@ -217,7 +266,7 @@ export default {
       <CombinationChartSample />
 
       <h3>Code</h3>
-      <h4>HTML</h4>
+      <strong>HTML</strong>
       <highlightjs
         language='html'
         :code="`<template>
@@ -225,7 +274,7 @@ export default {
 </template>`"
       />
 
-      <h4>JavaScript</h4>
+      <strong>JavaScript</strong>
       <highlightjs
         language='html'
         :code="`<script>
@@ -245,7 +294,7 @@ export default {
       <ColumnChartSample />
 
       <h3>Code</h3>
-      <h4>HTML</h4>
+      <strong>HTML</strong>
       <highlightjs
         language='html'
         :code="`<template>
@@ -253,7 +302,7 @@ export default {
 </template>`"
       />
 
-      <h4>JavaScript</h4>
+      <strong>JavaScript</strong>
       <highlightjs
         language='html'
         :code="`<script>
