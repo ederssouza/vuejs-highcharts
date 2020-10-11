@@ -7,7 +7,7 @@
         class="js-btn"
       >
         <a
-          :href="`#section${index + 1}`"
+          :href="`#section${index}`"
           :title="item.label"
           :class="{ 'active': index === 0 }"
         >
@@ -26,10 +26,15 @@ export default {
   data () {
     return {
       items: [
-        { label: 'Item 1' },
-        { label: 'Item 2' },
-        { label: 'Item 3' },
-        { label: 'Item 4' }
+        { label: 'Basic Chart' },
+        { label: 'Area Chart' },
+        { label: 'Bar Chart' },
+        { label: 'Column Chart' },
+        { label: 'Scatter Chart' },
+        { label: 'Line Chart' },
+        { label: 'Pie Chart' },
+        { label: 'Combination Chart' },
+        { label: 'Rewrite all props' }
       ]
     }
   },
