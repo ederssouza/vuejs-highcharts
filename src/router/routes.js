@@ -1,18 +1,21 @@
 'use strict'
 
-import Home from '@/views/Home'
-import SamplePage from '@/views/SamplePage'
+import Home from 'views/Home'
 
 const routes = [
   {
     name: 'Home',
     path: '/',
-    component: Home
-  },
-  {
-    name: 'SamplePage',
-    path: '/sample',
-    component: SamplePage
+    component: Home,
+    beforeEnter: (to, from, next) => {
+      if (sessionStorage.getItem('redirect') !== null) {
+        const redirect = sessionStorage.redirect
+        delete sessionStorage.redirect
+        next(redirect)
+      } else {
+        next()
+      }
+    }
   },
   {
     path: '*',
