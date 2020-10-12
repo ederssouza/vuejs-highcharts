@@ -20,7 +20,7 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-  background-color: var(--primary-color);
+  background-color: #333;
   color: white;
   font-size: 12px;
   padding: 2rem;
