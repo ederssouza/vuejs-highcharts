@@ -67,4 +67,4 @@ export default {
 
 ## Documentation
 
-TO DO
+[ederssouza.github.io/vuejs-highcharts](https://ederssouza.github.io/vuejs-highcharts/)
