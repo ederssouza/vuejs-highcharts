@@ -966,8 +966,35 @@ export default {
     CustomStylesChartSample,
     RewriteAllPropsChartSample
   },
+  methods: {
+    handleCopyCode (button, pre) {
+      button.addEventListener('click', () => {
+        const code = pre.querySelector('code')
+        const range = document.createRange()
+        range.selectNode(code)
+        window.getSelection().removeAllRanges() // clear current selection
+        window.getSelection().addRange(range) // to select text
+        document.execCommand('copy')
+        window.getSelection().removeAllRanges()// to deselect
+      })
+    },
+
+    renderCopyButton () {
+      const pres = document.querySelectorAll('pre')
+
+      pres.forEach(pre => {
+        const button = document.createElement('button')
+        button.classList.add('button')
+        button.classList.add('button--primary')
+        button.textContent = 'Copy'
+        pre.appendChild(button)
+        this.handleCopyCode(button, pre)
+      })
+    }
+  },
   mounted () {
     hljs.initHighlightingOnLoad()
+    this.renderCopyButton()
   }
 }
 </script>
@@ -982,8 +1009,19 @@ export default {
 .hljs {
   padding: 15px;
 
-  * {
+  *:not(.button) {
     line-height: 1.5;
+  }
+
+}
+
+pre {
+  position: relative;
+
+  .button {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 
