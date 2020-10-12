@@ -14,12 +14,6 @@ export default {
       type: [Number, String],
       default: 400
     },
-    navigation: {
-      enabled: true,
-      buttonOptions: {
-        enabled: true
-      }
-    },
     title: {
       type: String,
       default: ''
