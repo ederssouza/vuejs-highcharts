@@ -49,6 +49,7 @@ export default {
             { label: 'Line chart' },
             { label: 'Pie chart' },
             { label: 'Combination chart' },
+            { label: 'Custom styles' },
             { label: 'Rewrite all props' }
           ]
         }
