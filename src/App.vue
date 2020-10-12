@@ -22,12 +22,20 @@ export default {
     Header,
     Menu,
     Footer
+  },
+  mounted () {
+    window.hljs.initHighlightingOnLoad()
   }
 }
 </script>
 
 <style lang="scss">
 @import 'assets/scss/app.scss';
+
+#app {
+  position: relative;
+  top: 80px;
+}
 
 .hljs {
   border: 1px solid var(--code-bg-color);
