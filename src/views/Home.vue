@@ -164,7 +164,7 @@ export default {
 
     <section class="section">
       <h2 class="section__title">Examples</h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat consequatur, provident mollitia beatae saepe eaque. Quibusdam tempora libero cumque deserunt non assumenda dolore. Sed amet iste velit dignissimos maiores accusantium!</p>
+      <p>...</p>
     </section>
 
     <section class="section">
