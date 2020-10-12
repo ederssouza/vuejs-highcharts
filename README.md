@@ -1,6 +1,8 @@
-# VueJS Highcharts
+# Vue.js Highcharts
 
 ![GitHub](https://img.shields.io/github/license/ederssouza/vuejs-highcharts) ![npm](https://img.shields.io/npm/v/vuejs-highcharts) ![npm](https://img.shields.io/npm/dw/vuejs-highcharts) ![npm](https://img.shields.io/npm/dm/vuejs-highcharts)
+
+Vue.js wrapper for Highcharts library.
 
 ## Installation
 
@@ -15,9 +17,6 @@ $ yarn add vuejs-highcharts
 ```html
 <template>
   <ColumnChart
-    :title="chart.title"
-    :subtitle="chart.subtitle"
-    :yAxis="chart.yAxis"
     :xAxis="chart.xAxis"
     :series="chart.series"
   />
@@ -27,24 +26,15 @@ $ yarn add vuejs-highcharts
 import { ColumnChart } from 'vuejs-highcharts'
 
 export default {
+  name: 'BasicChartSample',
   components: {
     ColumnChart
   },
   data () {
     return {
       chart: {
-        title: 'Column chart title',
-        subtitle: 'Column chart subtitle',
         xAxis: {
-          title: {
-            text: 'xAxis title'
-          },
           categories: [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007]
-        },
-        yAxis: {
-          title: {
-            text: 'yAxis title'
-          }
         },
         series: [
           {
@@ -67,4 +57,4 @@ export default {
 
 ## Documentation
 
-[ederssouza.github.io/vuejs-highcharts](https://ederssouza.github.io/vuejs-highcharts/)
+For more features, access [ederssouza.github.io/vuejs-highcharts](https://ederssouza.github.io/vuejs-highcharts/).
