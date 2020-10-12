@@ -9,10 +9,19 @@
         <a
           :href="`#section${index}`"
           :title="item.label"
-          :class="{ 'active': index === 0 }"
         >
           {{ item.label }}
         </a>
+        <ul>
+          <li
+            v-for="(subitem, idx) in item.subitems"
+            :key="`item${idx}`"
+          >
+            <a :href="`#section${idx + items.length}`" :title="subitem.label">
+              {{ subitem.label }}
+            </a>
+          </li>
+        </ul>
       </li>
     </ul>
   </aside>
@@ -29,15 +38,20 @@ export default {
         { label: 'Instalation' },
         { label: 'How to use' },
         { label: 'Options' },
-        { label: 'Basic chart' },
-        { label: 'Area chart' },
-        { label: 'Bar chart' },
-        { label: 'Column chart' },
-        { label: 'Scatter chart' },
-        { label: 'Line chart' },
-        { label: 'Pie chart' },
-        { label: 'Combination chart' },
-        { label: 'Rewrite all props' }
+        {
+          label: 'Examples',
+          subitems: [
+            { label: 'Basic chart' },
+            { label: 'Area chart' },
+            { label: 'Bar chart' },
+            { label: 'Column chart' },
+            { label: 'Scatter chart' },
+            { label: 'Line chart' },
+            { label: 'Pie chart' },
+            { label: 'Combination chart' },
+            { label: 'Rewrite all props' }
+          ]
+        }
       ]
     }
   },
@@ -46,10 +60,6 @@ export default {
       const navbar = this.$refs['navbar']
 
       if (navbar) {
-        if (window.pageYOffset === 0) {
-          navbar.querySelector('li:first-child a').classList.add('active')
-        }
-
         if (window.pageYOffset > 0) {
           navbar.classList.add('fixed')
           return
@@ -86,17 +96,26 @@ export default {
 .doc__nav {
   flex-basis: 20%;
   font-weight: 200;
+  padding-top: 20px;
 }
 
 .doc__nav ul {
   list-style: none;
   padding-left: 0;
   line-height: 1.8;
+
+  ul {
+    padding-left: 8px;
+
+    li {
+      font-size: 13px;
+    }
+  }
 }
 
 .doc__nav ul.fixed {
   position: fixed;
-  top: 80px;
+  top: 100px;
 }
 
 .doc__nav li:hover {
@@ -107,16 +126,28 @@ export default {
 
 .doc__nav .active {
   color: var(--accent-color);
+  font-weight: 600;
   position: relative;
 }
 
+.doc__nav > ul > li > a {
+  font-weight: 600;
+}
+
 .doc__nav .active:after {
-  position: absolute;
-  content: "";
-  width: 1rem;
-  height: 1rem;
   background-color: var(--accent-color);
+  content: "";
+  height: 1rem;
   left: -1.5rem;
-  top: 0.3rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+}
+
+.doc__nav > ul > li > a + ul > li > a.active:after {
+  height: 0.8rem;
+  left: -1.5rem;
+  width: 0.8rem;
 }
 </style>
