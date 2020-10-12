@@ -9,6 +9,7 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
+        'views': join(__dirname, 'src', 'views'),
         'components': join(__dirname, 'src', 'components'),
         'utils': join(__dirname, 'src', 'utils')
       }
