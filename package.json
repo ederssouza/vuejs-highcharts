@@ -1,6 +1,6 @@
 {
   "name": "vuejs-highcharts",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": false,
   "main": "./dist/vuejs-highcharts.common.js",
   "files": [
@@ -20,6 +20,15 @@
     "npm-publish": "npm login && npm publish --access public",
     "deploy": "node scripts/gh-pages-deploy.js"
   },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ederssouza/vuejs-highcharts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ederssouza/vuejs-highcharts/issues"
+  },
+  "homepage": "https://ederssouza.github.io/vuejs-highcharts",
   "keywords": [
     "vuejs-highcharts",
     "highcharts",
@@ -28,7 +37,6 @@
     "graphs",
     "ederssouza"
   ],
-  "license": "MIT",
   "dependencies": {
     "core-js": "^2.6.5",
     "highcharts": "^8.2.0",
