@@ -30,6 +30,17 @@ html, body {
 p {
   font-weight: 300;
   color: #4A4A4A;
+
+  a, a:hover {
+    text-decoration: none;
+    color: var(--accent-color);
+  }
+
+  code {
+    background-color: #eee;
+    border-radius: 4px;
+    padding: 2px 6px;
+  }
 }
 
 a, a:hover {
