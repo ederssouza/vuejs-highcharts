@@ -968,7 +968,7 @@ export default {
 
     <section class="section">
       <h3 class="section__title">Rewrite all props</h3>
-      <p>If you need any configuration that is not mapped, use the <code>config</code> property and consult the <a href="https://api.highcharts.com/highcharts" title="Highcharts documentation" target="_blank">Highcharts documentation</a> code for more details.</p>
+      <p>If you need any configuration that is not mapped, use the <code>config</code> property and consult the <a href="https://api.highcharts.com/highcharts" title="Highcharts documentation" target="_blank">Highcharts documentation</a> code for more details. <u>Can also be used to overwrite mapped props</u>.</p>
       <RewriteAllPropsChartSample />
 
       <h4>Code</h4>
