@@ -2,6 +2,7 @@
   <ColumnChart
     :xAxis="chart.xAxis"
     :series="chart.series"
+    :customStyles="chart.customStyles"
   />
 </template>
 
@@ -30,7 +31,14 @@ export default {
             color: '#f7a35c',
             data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
           }
-        ]
+        ],
+        customStyles: {
+          color: '#666',
+          fontFamily: 'Nunito Sans',
+          fontSize: 10,
+          fontWeight: 'bold',
+          fontStyle: 'italic'
+        }
       }
     }
   }

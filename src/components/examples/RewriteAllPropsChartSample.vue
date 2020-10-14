@@ -2,6 +2,7 @@
   <ColumnChart
     :xAxis="chart.xAxis"
     :series="chart.series"
+    :config="chart.config"
   />
 </template>
 
@@ -22,15 +23,22 @@ export default {
         series: [
           {
             name: 'Installation',
-            color: '#03bbd4',
             data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
           },
           {
             name: 'Manufacturing',
-            color: '#f7a35c',
             data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
           }
-        ]
+        ],
+        config: {
+          colors: ['#2f7ed8', '#0d233a'],
+          credits: {
+            enabled: true
+          },
+          caption: {
+            text: '<b>The caption renders in the bottom, and is part of the exported chart.</b>'
+          }
+        }
       }
     }
   }

@@ -14,12 +14,10 @@ $ yarn add vuejs-highcharts</code></pre>
 
     <section class="section">
       <h2 class="section__title">How to use</h2>
-      <p>...</p>
-      <pre><code class="html">&lt;template&gt;
-  &lt;ColumnChart :prop1="propValue1" :prop2="propValue2" /&gt;
-&lt;/template&gt;
+      <pre><code class="html">&lt;!-- Add chart custom tag --&gt;
+&lt;ColumnChart :xAxis="chart.xAxis" :series="chart.series" /&gt;</code></pre>
 
-&lt;script&gt;
+      <pre><code class="javascript">// import one or more chart components
 import { ColumnChart } from 'vuejs-highcharts'
 
 export default {
@@ -29,58 +27,28 @@ export default {
   data () {
     return {
       chart: {
-        // config here
+        xAxis: {
+          // config here
+        },
+        series: [
+          // config here
+        ]
       }
     }
   }
-}
-&lt;/script&gt;</code></pre>
+}</code></pre>
     </section>
 
     <section class="section">
       <h2 class="section__title">Options</h2>
-      <p>...</p>
+      <h3>Properties</h3>
       <table id="customers">
         <tr>
           <th style="font-weight: 600;">name</th>
           <th style="font-weight: 600;">type</th>
           <th style="font-weight: 600;white-space: nowrap;">defalt value</th>
           <th style="font-weight: 600;">required</th>
-        </tr>
-        <tr>
-          <td>config</td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">Object</code></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">{}</code></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
-          <td>Overwrites all properties.</td>
-        </tr>
-        <tr>
-          <td>height</td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">Number</code>, <code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">String</code></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">400</code></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
-          <td>Controls the height of the chart.</td>
-        </tr>
-        <tr>
-          <td>title</td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">String</code></td>
-          <td></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
-          <td>Insert main title.</td>
-        </tr>
-        <tr>
-          <td>subtitle</td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">String</code></td>
-          <td></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
-          <td>Insert main subtitle.</td>
-        </tr>
-        <tr>
-          <td>backgroundColor</td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">String</code></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">'#ffffff'</code></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
-          <td>Controls the background color of the chart.</td>
+          <th style="font-weight: 600;">description</th>
         </tr>
         <tr>
           <td>xAxis</td>
@@ -92,7 +60,7 @@ export default {
         <tr>
           <td>yAxis</td>
           <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">Object</code></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">{}</code></td>
+          <td></td>
           <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
           <td>The Y axis or value axis. Normally this is the vertical axis, though if the chart is inverted this is the horizontal axis. In case of multiple axes, the yAxis node is an array of configuration objects.</td>
         </tr>
@@ -104,46 +72,18 @@ export default {
           <td>Series options for specific data and the data itself.</td>
         </tr>
         <tr>
+          <td>backgroundColor</td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">String</code></td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">'#ffffff'</code></td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
+          <td>Controls the background color of the chart.</td>
+        </tr>
+        <tr>
           <td>crosshair</td>
           <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">Boolean</code></td>
           <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
           <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
           <td>Configure a crosshair that follows either the mouse pointer or the hovered point.</td>
-        </tr>
-        <tr>
-          <td>legend</td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">Object</code></td>
-          <td></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
-          <td>The legend is a box containing a symbol and name for each series item or point item in the chart. Each series (or points in case of pie charts) is represented by a symbol and its name in the legend.</td>
-        </tr>
-        <tr>
-          <td>thousandsSep</td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">String</code></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">'.'</code></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
-          <td>Thousands separator.</td>
-        </tr>
-        <tr>
-          <td>decimalPoint</td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">String</code></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">','</code></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
-          <td>Decimal point.</td>
-        </tr>
-        <tr>
-          <td>customStyles</td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">Object</code></td>
-          <td></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
-          <td>Render chart with custom styles.</td>
-        </tr>
-        <tr>
-          <td>gridLineColor</td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">String</code></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">'#e6e6e6'</code></td>
-          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
-          <td>Custom grid line color.</td>
         </tr>
         <tr>
           <td>curvedLine</td>
@@ -153,31 +93,90 @@ export default {
           <td>Only for line chart type.</td>
         </tr>
         <tr>
+          <td>customStyles</td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">Object</code></td>
+          <td></td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
+          <td>Render chart with custom styles.</td>
+        </tr>
+        <tr>
+          <td>decimalPoint</td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">String</code></td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">','</code></td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
+          <td>Decimal point.</td>
+        </tr>
+        <tr>
+          <td>gridLineColor</td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">String</code></td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">'#e6e6e6'</code></td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
+          <td>Custom grid line color.</td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">Number</code>, <code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">String</code></td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">400</code></td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
+          <td>Controls the height of the chart.</td>
+        </tr>
+        <tr>
+          <td>legend</td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">Object</code></td>
+          <td></td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
+          <td>The legend is a box containing a symbol and name for each series item or point item in the chart. Each series (or points in case of pie charts) is represented by a symbol and its name in the legend.</td>
+        </tr>
+        <tr>
+          <td>subtitle</td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">String</code></td>
+          <td></td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
+          <td>Insert main subtitle.</td>
+        </tr>
+        <tr>
+          <td>thousandsSep</td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">String</code></td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">'.'</code></td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
+          <td>Thousands separator.</td>
+        </tr>
+        <tr>
+          <td>title</td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">String</code></td>
+          <td></td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
+          <td>Insert main title.</td>
+        </tr>
+        <tr>
           <td>tooltip</td>
           <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">Object</code></td>
           <td></td>
           <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
           <td>Tooltip configs.</td>
         </tr>
+        <tr>
+          <td>config</td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">Object</code></td>
+          <td></td>
+          <td><code style="padding: .2em .4em; margin: 0; font-size: 100%; background-color: rgba(27,31,35,.05); border-radius: 6px;">false</code></td>
+          <td>Overwrites all properties.</td>
+        </tr>
       </table>
     </section>
 
     <section class="section">
-      <h2 class="section__title">Examples</h2>
-      <p>...</p>
+      <h2 class="section__title" style="margin-bottom: 0;">Examples</h2>
     </section>
 
     <section class="section">
-      <h3 class="section__title">Basic chart</h3>
-      <p>...</p>
+      <h3 class="section__title" style="margin-top: 0;">Basic chart</h3>
+      <p>Minimum configuration for rendering the chart.</p>
       <BasicChartSample />
 
       <h4>Code</h4>
       <pre><code class="html">&lt;template&gt;
-  &lt;ColumnChart
-    :xAxis="chart.xAxis"
-    :series="chart.series"
-  /&gt;
+  &lt;ColumnChart :xAxis="chart.xAxis" :series="chart.series" /&gt;
 &lt;/template&gt;
 
 &lt;script&gt;
@@ -215,7 +214,7 @@ export default {
 
     <section class="section">
       <h3 class="section__title">Area chart</h3>
-      <p>...</p>
+      <p>Demonstrating a basic area chart, also known as a mountain chart. Area charts are similar to line charts, but commonly used to visualize volumes.</p>
       <AreaChartSample />
 
       <h4>Code</h4>
@@ -291,7 +290,7 @@ export default {
 
     <section class="section">
       <h3 class="section__title">Bar chart</h3>
-      <p>...</p>
+      <p>Bar chart showing horizontal columns. This chart type is often beneficial for smaller screens, as the user can scroll through the data vertically, and axis labels are easy to read.</p>
       <BarChartSample />
 
       <h4>Code</h4>
@@ -367,7 +366,7 @@ export default {
 
     <section class="section">
       <h3 class="section__title">Column chart</h3>
-      <p>...</p>
+      <p>A basic column chart compares rainfall values between four cities. Tokyo has the overall highest amount of rainfall, followed by New York. The chart is making use of the axis crosshair feature, to highlight months as they are hovered over.</p>
       <ColumnChartSample />
 
       <h4>Code</h4>
@@ -449,7 +448,7 @@ export default {
 
     <section class="section">
       <h3 class="section__title">Scatter chart</h3>
-      <p>...</p>
+      <p>Scatter charts are often used to visualize the relationships between data in two dimensions. This chart is visualizing height and weight by gender, showing a clear trend where men are on average taller and heavier than women.</p>
       <ScatterChartSample />
 
       <h4>Code</h4>
@@ -633,7 +632,7 @@ export default {
 
     <section class="section">
       <h3 class="section__title">Line chart</h3>
-      <p>...</p>
+      <p>Basic line chart showing trends in a dataset. This chart includes the <code>series-label</code> module, which adds a label to each line for enhanced readability.</p>
       <LineChartSample />
 
       <h4>Code</h4>
@@ -711,7 +710,7 @@ export default {
 
     <section class="section">
       <h3 class="section__title">Pie chart</h3>
-      <p>...</p>
+      <p>Pie charts are very popular for showing a compact overview of a composition or comparison. While they can be harder to read than column charts, they remain a popular choice for small datasets.</p>
       <PieChartSample />
 
       <h4>Code</h4>
@@ -819,7 +818,7 @@ export default {
 
     <section class="section">
       <h3 class="section__title">Combination chart</h3>
-      <p>...</p>
+      <p>Chart showing how different series types can be combined in a single chart. The chart is using a set of column series, overlaid by a line.</p>
       <CombinationChartSample />
 
       <h4>Code</h4>
@@ -915,20 +914,110 @@ export default {
 
     <section class="section">
       <h3 class="section__title">Custom styles</h3>
-      <p>...</p>
+      <p>Use CSS styles to customize the chart.</p>
       <CustomStylesChartSample />
 
       <h4>Code</h4>
-      <pre><code class="html">&lt;!-- TO DO --&gt;</code></pre>
+      <pre><code class="html">&lt;template&gt;
+  &lt;ColumnChart
+    :xAxis="chart.xAxis"
+    :series="chart.series"
+    :customStyles="chart.customStyles"
+  /&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import ColumnChart from 'components/charts/ColumnChart'
+
+export default {
+  name: 'CustomStylesChartSample',
+  components: {
+    ColumnChart
+  },
+  data () {
+    return {
+      chart: {
+        xAxis: {
+          categories: [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007]
+        },
+        series: [
+          {
+            name: 'Installation',
+            color: '#03bbd4',
+            data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+          },
+          {
+            name: 'Manufacturing',
+            color: '#f7a35c',
+            data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+          }
+        ],
+        customStyles: {
+          color: '#666',
+          fontFamily: 'Nunito Sans',
+          fontSize: 10,
+          fontWeight: 'bold',
+          fontStyle: 'italic'
+        }
+      }
+    }
+  }
+}
+&lt;/script&gt;</code></pre>
     </section>
 
     <section class="section">
       <h3 class="section__title">Rewrite all props</h3>
-      <p>...</p>
+      <p>If you need any configuration that is not mapped, use the <code>config</code> property and consult the <a href="https://api.highcharts.com/highcharts" title="Highcharts documentation" target="_blank">Highcharts documentation</a> code for more details.</p>
       <RewriteAllPropsChartSample />
 
       <h4>Code</h4>
-      <pre><code class="html">&lt;!-- TO DO --&gt;</code></pre>
+      <pre><code class="html">&lt;template&gt;
+  &lt;ColumnChart
+    :xAxis="chart.xAxis"
+    :series="chart.series"
+    :config="chart.config"
+  /&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import ColumnChart from 'components/charts/ColumnChart'
+
+export default {
+  name: 'RewriteAllPropsChartSample',
+  components: {
+    ColumnChart
+  },
+  data () {
+    return {
+      chart: {
+        xAxis: {
+          categories: [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007]
+        },
+        series: [
+          {
+            name: 'Installation',
+            data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+          },
+          {
+            name: 'Manufacturing',
+            data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+          }
+        ],
+        config: {
+          colors: ['#2f7ed8', '#0d233a'],
+          credits: {
+            enabled: true
+          },
+          caption: {
+            text: '&lt;b&gt;The caption renders in the bottom, and is part of the exported chart.&lt;/b&gt;'
+          }
+        }
+      }
+    }
+  }
+}
+&lt;/script&gt;</code></pre>
     </section>
   </article>
 </template>
@@ -936,9 +1025,7 @@ export default {
 <script>
 // highlight
 import hljs from 'highlight.js'
-
 import 'highlight.js/styles/atom-one-light.css'
-// import 'highlight.js/styles/tomorrow.css'
 
 // components
 import BasicChartSample from 'components/examples/BasicChartSample'
@@ -1012,7 +1099,6 @@ export default {
   *:not(.button) {
     line-height: 1.5;
   }
-
 }
 
 pre {
