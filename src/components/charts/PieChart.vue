@@ -128,6 +128,44 @@ export default {
           height,
           style: {
             ...customStyles
+          },
+          events: {
+            addSeries (val) {
+              console.log('addSeries', val)
+            },
+            afterPrint (val) {
+              console.log('afterPrint', val)
+            },
+            beforePrint (val) {
+              console.log('beforePrint', val)
+            },
+            click (val) {
+              console.log('click', val)
+            },
+            drilldown (val) {
+              console.log('drilldown', val)
+            },
+            drillup (val) {
+              console.log('drillup', val)
+            },
+            drillupall (val) {
+              console.log('drillupall', val)
+            },
+            exportData (val) {
+              console.log('exportData', val)
+            },
+            load (val) {
+              console.log('load', val)
+            },
+            redraw (val) {
+              console.log('redraw', val)
+            },
+            render (val) {
+              console.log('render', val)
+            },
+            selection (val) {
+              console.log('selection', val)
+            }
           }
         },
         title: {
