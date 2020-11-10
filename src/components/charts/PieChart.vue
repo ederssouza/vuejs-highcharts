@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import Highcharts from 'highcharts'
+
 export default {
   name: 'PieChart',
   props: {
@@ -114,14 +116,14 @@ export default {
         return obj
       })
 
-      this.$highcharts.setOptions({
+      Highcharts.setOptions({
         lang: {
           thousandsSep,
           decimalPoint
         }
       })
 
-      this.chart = this.$highcharts.chart(this.$refs.pieChart, {
+      this.chart = Highcharts.chart(this.$refs.pieChart, {
         chart: {
           type: 'pie',
           backgroundColor,

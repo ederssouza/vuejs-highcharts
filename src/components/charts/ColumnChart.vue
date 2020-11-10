@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import Highcharts from 'highcharts'
+
 export default {
   name: 'ColumnChart',
   props: {
@@ -108,14 +110,14 @@ export default {
         tooltip
       } = this
 
-      this.$highcharts.setOptions({
+      Highcharts.setOptions({
         lang: {
           thousandsSep,
           decimalPoint
         }
       })
 
-      this.chart = this.$highcharts.chart(this.$refs.columnChart, {
+      this.chart = Highcharts.chart(this.$refs.columnChart, {
         chart: {
           type: 'column',
           backgroundColor,

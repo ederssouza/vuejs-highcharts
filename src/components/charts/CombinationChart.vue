@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import Highcharts from 'highcharts'
+
 export default {
   name: 'CombinationChart',
   props: {
@@ -112,14 +114,14 @@ export default {
         tooltip
       } = this
 
-      this.$highcharts.setOptions({
+      Highcharts.setOptions({
         lang: {
           thousandsSep,
           decimalPoint
         }
       })
 
-      this.chart = this.$highcharts.chart(this.$refs.combinationChart, {
+      this.chart = Highcharts.chart(this.$refs.combinationChart, {
         chart: {
           backgroundColor,
           height,

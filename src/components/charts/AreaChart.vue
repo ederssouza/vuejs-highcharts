@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import Highcharts from 'highcharts'
+
 export default {
   name: 'AreaChart',
   props: {
@@ -108,14 +110,14 @@ export default {
         tooltip
       } = this
 
-      this.$highcharts.setOptions({
+      Highcharts.setOptions({
         lang: {
           thousandsSep,
           decimalPoint
         }
       })
 
-      this.chart = this.$highcharts.chart(this.$refs.areaChart, {
+      this.chart = Highcharts.chart(this.$refs.areaChart, {
         chart: {
           type: curvedLine ? 'areaspline' : 'area',
           backgroundColor,
