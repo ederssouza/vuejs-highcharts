@@ -2,7 +2,7 @@
   <article class="doc__content">
     <section style="padding-top: 10px;">
       <h2 class="section__title">Vue.js Highcharts</h2>
-      <p>Vue.js wrapper for Highcharts library.</p>
+      <p>Wrapper for Highcharts library for <strong>Vue.js 2.x</strong> and <strong>Vue.js 3.x.</strong></p>
     </section>
 
     <section class="section">
