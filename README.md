@@ -2,7 +2,11 @@
 
 ![GitHub](https://img.shields.io/github/license/ederssouza/vuejs-highcharts) ![npm](https://img.shields.io/npm/v/vuejs-highcharts) ![npm](https://img.shields.io/npm/dw/vuejs-highcharts) ![npm](https://img.shields.io/npm/dm/vuejs-highcharts)
 
-Vue.js wrapper for Highcharts library.
+Wrapper for Highcharts library for **Vue.js 2.x** and **Vue.js 3.x**.
+
+## Documentation
+
+For more features, access [ederssouza.github.io/vuejs-highcharts](https://ederssouza.github.io/vuejs-highcharts/).
 
 ## Installation
 
@@ -54,7 +58,3 @@ export default {
 }
 </script>
 ```
-
-## Documentation
-
-For more features, access [ederssouza.github.io/vuejs-highcharts](https://ederssouza.github.io/vuejs-highcharts/).
