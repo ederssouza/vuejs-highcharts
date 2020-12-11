@@ -1,7 +1,7 @@
 {
   "name": "vuejs-highcharts",
   "description": "Wrapper for Highcharts library for Vue.js 2.x",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "private": false,
   "main": "./dist/vuejs-highcharts.common.js",
   "files": [
