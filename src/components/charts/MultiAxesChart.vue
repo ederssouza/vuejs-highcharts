@@ -20,6 +20,10 @@ export default {
       type: String,
       default: ''
     },
+    height: {
+      type: [Number, String],
+      default: 400
+    },
     backgroundColor: {
       type: String,
       default: '#ffffff'
